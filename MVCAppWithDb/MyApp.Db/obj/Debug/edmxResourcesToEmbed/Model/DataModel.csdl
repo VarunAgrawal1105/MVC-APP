@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EventDBModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StartTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Duration" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OtherDetails" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InviteByEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User1" Relationship="EventDBModel1.FK_Event_Event1" FromRole="Event" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Event1" Relationship="EventDBModel1.FK_Event_Event1" FromRole="User" ToRole="Event" />
+  </EntityType>
+  <EntityContainer Name="SignupAndLoginEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Event" EntityType="Self.Event" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <AssociationSet Name="FK_Event_Event1" Association="EventDBModel1.FK_Event_Event1">
+      <End Role="User" EntitySet="User" />
+      <End Role="Event" EntitySet="Event" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Event_Event11" Association="EventDBModel1.FK_Event_Event11">
+      <End Role="Event" EntitySet="Event" />
+      <End Role="Event1" EntitySet="Event" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK_Event_Event1">
+    <End Type="EventDBModel1.User" Role="User" Multiplicity="0..1" />
+    <End Type="EventDBModel1.Event" Role="Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Event">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Event_Event11">
+    <End Type="EventDBModel1.Event" Role="Event" Multiplicity="1" />
+    <End Type="EventDBModel1.Event" Role="Event1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Event1">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

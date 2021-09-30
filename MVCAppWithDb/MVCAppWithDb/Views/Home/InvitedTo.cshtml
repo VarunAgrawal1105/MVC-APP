@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MyApp.Db.Model.Event>
+
+@{
+    ViewBag.Title = "InvitedTo";
+}
+
+<h2>InvitedTo</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 text-center">
+            <table class="table">
+                @foreach (var item in Model)
+                {
+                    string email = (string)Session["UserEmailId"];
+                    if (item.InviteByEmail != null)
+                    {
+                        if (item.InviteByEmail.Split(',').Contains(email))
+                        {
+                    <tr class="text-center">
+                        <th>
+                            <h3>@Html.ActionLink(item.Title, "Details", "Home", new { id = item.EventId }, null)</h3>
+                        </th>
+                    </tr>
+                        }
+                    }
+                }
+            </table>
+
+        </div>
+
+    </div>
+</div>

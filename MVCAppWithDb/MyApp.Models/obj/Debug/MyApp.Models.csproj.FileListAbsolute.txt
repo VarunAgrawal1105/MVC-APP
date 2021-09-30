@@ -1,0 +1,6 @@
+C:\MVC Project\MVCAppWithDb\MyApp.Models\bin\Debug\MyApp.Models.dll
+C:\MVC Project\MVCAppWithDb\MyApp.Models\bin\Debug\MyApp.Models.pdb
+C:\MVC Project\MVCAppWithDb\MyApp.Models\obj\Debug\MyApp.Models.csprojAssemblyReference.cache
+C:\MVC Project\MVCAppWithDb\MyApp.Models\obj\Debug\MyApp.Models.csproj.CoreCompileInputs.cache
+C:\MVC Project\MVCAppWithDb\MyApp.Models\obj\Debug\MyApp.Models.dll
+C:\MVC Project\MVCAppWithDb\MyApp.Models\obj\Debug\MyApp.Models.pdb

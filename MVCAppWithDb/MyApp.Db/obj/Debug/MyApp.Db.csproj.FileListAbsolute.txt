@@ -1,0 +1,14 @@
+C:\MVC Project\MVCAppWithDb\MyApp.Db\bin\Debug\MyApp.Db.dll
+C:\MVC Project\MVCAppWithDb\MyApp.Db\bin\Debug\MyApp.Db.pdb
+C:\MVC Project\MVCAppWithDb\MyApp.Db\obj\Debug\MyApp.Db.csprojAssemblyReference.cache
+C:\MVC Project\MVCAppWithDb\MyApp.Db\obj\Debug\MyApp.Db.csproj.CoreCompileInputs.cache
+C:\MVC Project\MVCAppWithDb\MyApp.Db\obj\Debug\MyApp.Db.dll
+C:\MVC Project\MVCAppWithDb\MyApp.Db\obj\Debug\MyApp.Db.pdb
+C:\MVC Project\MVCAppWithDb\MyApp.Db\bin\Debug\MyApp.Db.dll.config
+C:\MVC Project\MVCAppWithDb\MyApp.Db\bin\Debug\EntityFramework.dll
+C:\MVC Project\MVCAppWithDb\MyApp.Db\bin\Debug\EntityFramework.SqlServer.dll
+C:\MVC Project\MVCAppWithDb\MyApp.Db\bin\Debug\MyApp.Models.dll
+C:\MVC Project\MVCAppWithDb\MyApp.Db\bin\Debug\MyApp.Models.pdb
+C:\MVC Project\MVCAppWithDb\MyApp.Db\bin\Debug\EntityFramework.xml
+C:\MVC Project\MVCAppWithDb\MyApp.Db\bin\Debug\EntityFramework.SqlServer.xml
+C:\MVC Project\MVCAppWithDb\MyApp.Db\obj\Debug\MyApp.Db.csproj.CopyComplete
